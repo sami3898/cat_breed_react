@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Typography, Container } from "@material-ui/core";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     heroContainer: {
@@ -66,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
 
 const HeroSection = () => {
     const classes = useStyles();
+    const navigation = useNavigate();
 
     return (
         <Container className={classes.heroContainer}>
@@ -81,7 +83,7 @@ const HeroSection = () => {
         </Typography> */}
                 {/* <a href="/PredictPage" smooth={true} duration={500}> */}
                     <Button
-                        href="/PredictPage"
+                        onClick={() => navigation("/PredictPage")}
                         variant="outlined"
                         color="primary"
                         className={classes.heroButton}

@@ -15,7 +15,9 @@ import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(()=>({
     link:{
-       fontFamily: "Poppins"
+       fontFamily: "Poppins",
+       textDecoration: "none",
+       color: "black"
     },
     icon:{
         color: "white"
@@ -35,21 +37,21 @@ const classes = useStyles();
         <List style={{ width: "200px"}}>
          <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <NavLink to={"/"}>
+              <NavLink to={"/"} className={classes.link}>
                 <Typography variant="body1" className={classes.link}>Home</Typography>
               </NavLink>
             </ListItemText>
           </ListItem>
          <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <NavLink to={"/"}>
+              <NavLink to={"/"} className={classes.link}>
                 <Typography variant="body1" className={classes.link}>How it's work?</Typography>
               </NavLink>
             </ListItemText>
           </ListItem>
          <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <NavLink to={"/"}>
+              <NavLink to={"/"} className={classes.link}>
                 <Typography variant="body1" className={classes.link}>About</Typography>
               </NavLink>
             </ListItemText>
